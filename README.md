@@ -64,3 +64,20 @@ flutter pub get
 flutter run
 ```
 
+## Screenshots
+
+This repository includes example screenshots under the `images/` folder.
+
+### 1 — Intro screen
+![Intro screen](images/1.png)
+
+### 2 — Add / Location or other screen
+![Home page](images/2.png)
+
+### 3 — Menu / 7-day forecast
+![Menu / Forecast](images/3.png)
+
+### 4 — Home page (summary + hourly)
+![Add / Location](images/4.png)
+
+
