@@ -1,16 +1,15 @@
 # weather_app
 
-A new Flutter project.
+A new Flutter project : The Weather Forecast App
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is shows the details information about maximum minimum temperature with hourly updates of today. It enlists 7-day forecast along with sunrise and sunset time.
 
-A few resources to get you started if this is your first Flutter project:
+## How to Use
+You must provide longitude and latitude details to the given page. Then it renders necessary information to the homepage calling the API.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](images/1.png)
+![alt text](images/2.png)
+![alt text](images/3.png)
+![alt text](images/4.png)

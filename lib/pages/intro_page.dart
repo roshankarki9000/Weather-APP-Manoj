@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'home_page.dart';
+import 'package:weather_app/pages/add_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -64,7 +64,7 @@ class IntroPage extends StatelessWidget {
                     ),
                     onPressed: () {
                       Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (_) => const HomePage()),
+                        MaterialPageRoute(builder: (_) => const AddPage()),
                       );
                     },
                     child: Text(
