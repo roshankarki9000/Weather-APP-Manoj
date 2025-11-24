@@ -197,12 +197,16 @@ class _HomePageState extends State<HomePage> {
               } else if (idx == 1) {
                 // Add: open AddPage to change coordinates
                 if (mounted) {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AddPage()));
+                  Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (_) => const AddPage()));
                 }
               } else if (idx == 2) {
                 // Menu: open MenuPage
                 if (mounted) {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => const MenuPage()));
+                  Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (_) => const MenuPage()));
                 }
               }
             },
@@ -232,9 +236,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildHourlyList(HourlyWeather weather) {
-    // Build a simple filtered list starting at the first hourly timestamp
-    // that is >= now and take up to 48 entries. This avoids manual index
-    // arithmetic and keeps the code readable.
     final now = DateTime.now();
     final formatter = DateFormat.Hm();
 

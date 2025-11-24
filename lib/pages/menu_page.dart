@@ -107,12 +107,11 @@ class _MenuPageState extends State<MenuPage> {
           children: [
             Center(
               child: Text(
-                  'Latitude: ${Provider.of<LocationProvider>(context).latitude.toStringAsFixed(4)}\nLongitude: ${Provider.of<LocationProvider>(context).longitude.toStringAsFixed(4)}',
+                'Latitude: ${Provider.of<LocationProvider>(context).latitude.toStringAsFixed(4)}\nLongitude: ${Provider.of<LocationProvider>(context).longitude.toStringAsFixed(4)}',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16.sp),
               ),
             ),
-            
 
             // Today's min/max (centered)
             if (_forecast != null && _forecast!.dates.isNotEmpty)

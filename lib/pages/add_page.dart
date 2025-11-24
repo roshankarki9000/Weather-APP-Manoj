@@ -33,7 +33,9 @@ class _AddPageState extends State<AddPage> {
     final lat = double.tryParse(_latController.text.trim());
     final lon = double.tryParse(_lonController.text.trim());
     if (lat == null || lon == null) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Invalid coordinates')));
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('Invalid coordinates')));
       return;
     }
     Provider.of<LocationProvider>(context, listen: false).update(lat, lon);
@@ -60,38 +62,69 @@ class _AddPageState extends State<AddPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 40.h),
-            Text('Add Location', style: TextStyle(fontSize: 20.sp, color: Colors.white, fontWeight: FontWeight.bold)),
+            Text(
+              'Add Location',
+              style: TextStyle(
+                fontSize: 20.sp,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             SizedBox(height: 20.h),
             TextField(
               controller: _latController,
-              keyboardType: TextInputType.numberWithOptions(decimal: true, signed: true),
+              keyboardType: TextInputType.numberWithOptions(
+                decimal: true,
+                signed: true,
+              ),
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 labelText: 'Latitude',
                 labelStyle: const TextStyle(color: Colors.white70),
-                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r), borderSide: const BorderSide(color: Colors.white24)),
-                focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r), borderSide: const BorderSide(color: Colors.white)),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.r),
+                  borderSide: const BorderSide(color: Colors.white24),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.r),
+                  borderSide: const BorderSide(color: Colors.white),
+                ),
               ),
             ),
             SizedBox(height: 12.h),
             TextField(
               controller: _lonController,
-              keyboardType: TextInputType.numberWithOptions(decimal: true, signed: true),
+              keyboardType: TextInputType.numberWithOptions(
+                decimal: true,
+                signed: true,
+              ),
               style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 labelText: 'Longitude',
                 labelStyle: const TextStyle(color: Colors.white70),
-                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r), borderSide: const BorderSide(color: Colors.white24)),
-                focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.r), borderSide: const BorderSide(color: Colors.white)),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.r),
+                  borderSide: const BorderSide(color: Colors.white24),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8.r),
+                  borderSide: const BorderSide(color: Colors.white),
+                ),
               ),
             ),
             const Spacer(),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.white, padding: EdgeInsets.symmetric(vertical: 12.h)),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  padding: EdgeInsets.symmetric(vertical: 12.h),
+                ),
                 onPressed: _save,
-                child: Text('Save', style: TextStyle(color: Colors.purple, fontSize: 16.sp)),
+                child: Text(
+                  'Save',
+                  style: TextStyle(color: Colors.purple, fontSize: 16.sp),
+                ),
               ),
             ),
             SizedBox(height: 24.h),

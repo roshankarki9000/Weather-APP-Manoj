@@ -5,8 +5,8 @@ class LocationProvider with ChangeNotifier {
   double _longitude;
 
   LocationProvider({double? latitude, double? longitude})
-      : _latitude = latitude ?? 51.5074,
-        _longitude = longitude ?? -0.1278;
+    : _latitude = latitude ?? 51.5074,
+      _longitude = longitude ?? -0.1278;
 
   double get latitude => _latitude;
   double get longitude => _longitude;

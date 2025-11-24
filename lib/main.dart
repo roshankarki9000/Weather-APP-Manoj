@@ -20,28 +20,28 @@ class MyApp extends StatelessWidget {
         return ChangeNotifierProvider(
           create: (_) => LocationProvider(),
           child: MaterialApp(
-          title: 'Simple Weather App',
-          theme: ThemeData(
-            useMaterial3: true,
-            textTheme: Theme.of(context).textTheme.apply(
-              bodyColor: Colors.white,
-              displayColor: Colors.white,
-            ),
+            title: 'Simple Weather App',
+            theme: ThemeData(
+              useMaterial3: true,
+              textTheme: Theme.of(context).textTheme.apply(
+                bodyColor: Colors.white,
+                displayColor: Colors.white,
+              ),
 
-            appBarTheme: const AppBarTheme(
-              backgroundColor: Colors.transparent,
-              foregroundColor: Colors.white,
-              iconTheme: IconThemeData(color: Colors.white),
-              elevation: 0,
-            ),
+              appBarTheme: const AppBarTheme(
+                backgroundColor: Colors.transparent,
+                foregroundColor: Colors.white,
+                iconTheme: IconThemeData(color: Colors.white),
+                elevation: 0,
+              ),
 
-            iconTheme: const IconThemeData(color: Colors.white),
-            bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-              selectedItemColor: Colors.white,
-              unselectedItemColor: Colors.white,
-              backgroundColor: Colors.transparent,
+              iconTheme: const IconThemeData(color: Colors.white),
+              bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+                selectedItemColor: Colors.white,
+                unselectedItemColor: Colors.white,
+                backgroundColor: Colors.transparent,
+              ),
             ),
-          ),
             home: child,
           ),
         );
